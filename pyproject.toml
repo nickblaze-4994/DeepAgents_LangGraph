@@ -1,0 +1,28 @@
+[project]
+name = "adk-realtime-deepagents-voice"
+version = "0.1.0"
+description = "Real-time voice agent built with Google ADK + the Gemini Live API, with a LangChain deepagents-powered research tool."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    # Google Agent Development Kit — drives the Gemini Live API session.
+    "google-adk>=1.0.0",
+    # LangChain "deep agent" harness used as the research tool.
+    "deepagents>=0.0.6",
+    # Lets deepagents run on Gemini via init_chat_model("google_genai:...").
+    "langchain-google-genai>=2.0.0",
+    # Web search backend for the research agent.
+    "tavily-python>=0.5.0",
+    # Tracing/observability: one unified trace tree (RunTree SDK) covering the
+    # voice session and the nested deep-research agent.
+    "langsmith>=0.1.0",
+    # Build the time-aligned stereo conversation recording for the trace.
+    "numpy>=1.26.0",
+    # Web server + websocket transport for the browser client.
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "python-dotenv>=1.0.1",
+]
+
+[tool.uv]
+package = false

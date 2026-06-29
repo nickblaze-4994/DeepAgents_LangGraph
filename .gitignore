@@ -1,0 +1,25 @@
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+credentials.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.uv/
+
+# Local tooling configs (kept local, not published)
+.claude/settings.local.json
+.github/instructions/corridor.instructions.md
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
