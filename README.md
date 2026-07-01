@@ -1,6 +1,4 @@
-# 🎙️ Real-time Voice Research Agent — Google ADK × Gemini Live × deepagents
-
-A small, hackable demo of a **real-time voice agent**:
+ Real-time Voice Research Agent — Google ADK × Gemini Live × deepagents
 
 - **[Google ADK](https://adk.dev)** runs a bidirectional **[Gemini Live API](https://ai.google.dev/gemini-api/docs/live-api)** session (`gemini-3.1-flash-live-preview`) — you talk, it talks back, with barge-in.
 - When you ask something that needs real research, the voice agent calls a **[LangChain deepagents](https://github.com/langchain-ai/deepagents)** tool that plans, runs multiple **Tavily** web searches, and writes a report.
@@ -17,11 +15,8 @@ A small, hackable demo of a **real-time voice agent**:
                                                          │ deep_research│  ← deepagents
                                                          │  + Tavily    │
                                                          └──────────────┘
-```
 
 ## Project layout
-
-```
 app/
   main.py            FastAPI WebSocket server; bridges browser audio <-> Gemini Live
   voice_agent.py     The ADK root agent (Gemini Live model + deep_research tool)
